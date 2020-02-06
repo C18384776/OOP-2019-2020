@@ -116,24 +116,10 @@ public class BugZap extends PApplet
 
 	void moveBug()
 	{
-		// if ((frameCount % 60) == 0)
-		// {
-		// 	bugX += random(-5, +5);
-		// 	if (bugX < halfBugWidth )
-		// 	{
-		// 	  bugX = halfBugWidth;
-		// 	}
-			
-		// 	if (bugX + halfBugWidth > width)
-		// 	{
-		// 	  bugX = width - halfBugWidth;
-		// 	}
-		// 	bugY ++;
-		// }
 		bugX++;
 		if (bugX > (width+bugWidth/2))
 		{
-			bugX = -25;
+			bugX = -(bugWidth/2);
 		}
 	}
 

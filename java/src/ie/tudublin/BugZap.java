@@ -2,6 +2,7 @@ package ie.tudublin;
 
 import processing.core.PApplet;
 
+// Make bug appear from left side of the screen going to right.
 public class BugZap extends PApplet
 {	
 	public void settings()
@@ -45,7 +46,7 @@ public class BugZap extends PApplet
 
 	void resetBug()
 	{
-		bugX = random(halfBugWidth, width - halfBugWidth);
+		bugX = -20;
 		bugY = 50;
 	}
 
@@ -115,19 +116,24 @@ public class BugZap extends PApplet
 
 	void moveBug()
 	{
-		if ((frameCount % 60) == 0)
-		{
-			bugX += random(-5, +5);
-			if (bugX < halfBugWidth )
-			{
-			  bugX = halfBugWidth;
-			}
+		// if ((frameCount % 60) == 0)
+		// {
+		// 	bugX += random(-5, +5);
+		// 	if (bugX < halfBugWidth )
+		// 	{
+		// 	  bugX = halfBugWidth;
+		// 	}
 			
-			if (bugX + halfBugWidth > width)
-			{
-			  bugX = width - halfBugWidth;
-			}
-			bugY ++;
+		// 	if (bugX + halfBugWidth > width)
+		// 	{
+		// 	  bugX = width - halfBugWidth;
+		// 	}
+		// 	bugY ++;
+		// }
+		bugX++;
+		if (bugX > (width+bugWidth/2))
+		{
+			bugX = -25;
 		}
 	}
 
@@ -138,5 +144,5 @@ public class BugZap extends PApplet
 		drawPlayer(playerX, playerY, playerWidth);
 		drawBug(bugX, bugY);
 		moveBug();
-	}
+	} 
 }

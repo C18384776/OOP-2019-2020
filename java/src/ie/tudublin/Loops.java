@@ -23,6 +23,19 @@ public class Loops extends PApplet
 
 	public void draw()
 	{	
-		background(0);		
+		background(0);
+
+		int i = 0;
+		while (i < 10) 
+		{
+			i++;
+		}	
+
+		int y;
+		stroke(220);
+		for ( y = 10 ; y < 40 ; y += 10)
+		{
+			line(200, y, 300, y);
+		}
 	}
 }

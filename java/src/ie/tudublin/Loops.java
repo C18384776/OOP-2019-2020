@@ -30,7 +30,10 @@ public class Loops extends PApplet
 		// this.circles_going_left_to_right();
 		// this.rainbow_down_lines();
 		// this.circles_going_left_to_right_colours();
-		this.chess_board();
+		// this.chess_board();
+		// this.upside_down_pyramid();
+		// this.square_of_circular_circles();
+		this.checkers_board();
 	}
 
 	public void middle_lines_going_inside()
@@ -134,6 +137,62 @@ public class Loops extends PApplet
 		{
 			text(number, i, 25);
 			number++;
+		}
+	}
+
+	public void upside_down_pyramid()
+	{
+		int i;
+
+		for ( i=50 ; i <= 200; i+=50)
+		{
+			rect(i, i, 500-(i+i), 50);
+		}
+
+	}
+
+	public void square_of_circular_circles()
+	{
+		int i, j;
+		float one = 4;
+		float two = one;
+		colorMode(HSB, 100);
+		noStroke();
+
+		for(j = 25 ; j <= 500; j+=50)
+		{
+			for (i = 25 ; i <= 500 ; i+=50)
+			{
+				fill(one, 255, 100);
+				one +=4;
+				ellipse(i, j, 50, 50);
+			}
+			two += 3;
+			one = two;
+		}
+	}
+
+	public void checkers_board()
+	{
+		int i, j;
+		boolean trigger = true;
+		fill(0 , 0, 140);
+		for (i = 0 ; i <= 500; i+=25)
+		{
+			for(j = 0 ; j <= 500 ; j+=25)
+			{
+				if (trigger == true)
+				{
+					fill(0, 0, 255);
+					trigger = false;
+				}
+				else
+				{
+					fill(0, 0, 140);
+					trigger = true;
+				}
+				rect(i, j, 25, 25);
+			}
 		}
 	}
 }

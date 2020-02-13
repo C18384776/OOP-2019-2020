@@ -26,7 +26,7 @@ public class Loops extends PApplet
 
 	public void draw()
 	{
-		// this.middle_Lines();
+		// this.middle_lines_going_inside();
 		// this.circles_going_left_to_right();
 		// this.rainbow_down_lines();
 		// this.circles_going_left_to_right_colours();
@@ -176,7 +176,6 @@ public class Loops extends PApplet
 	{
 		int i, j;
 		boolean trigger = true;
-		fill(0 , 0, 140);
 		for (i = 0 ; i <= 500; i+=25)
 		{
 			for(j = 0 ; j <= 500 ; j+=25)

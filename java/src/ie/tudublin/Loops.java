@@ -32,8 +32,8 @@ public class Loops extends PApplet
 		// this.circles_going_left_to_right_colours();
 		// this.chess_board();
 		// this.upside_down_pyramid();
-		// this.square_of_circular_circles();
-		this.checkers_board();
+		this.square_of_circular_circles();
+		// this.checkers_board();
 	}
 
 	public void middle_lines_going_inside()
